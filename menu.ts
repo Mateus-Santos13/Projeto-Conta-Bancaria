@@ -1,6 +1,7 @@
 import leia from "readline-sync";//import readline sync para leitura de dados do teclado
 import { colors } from './src/util/Colors';//importando o arquivo colors.ts
-import { Conta } from "./src/model/conta";
+import { Conta } from "./src/model/Conta";
+import { Input } from "./src/model/Input";
 
 
 export function main(){
@@ -58,8 +59,8 @@ export function main(){
 
 console.log(colors.reset);// Reseta as cores
 console.log(colors.fg.yellow);// Cor da fonte amarela
-console.log("\n➜ Escolha uma opção: ");// Escolha uma opção
-opcao = leia.questionInt();
+console.log("\n➜ Escolha uma opção desejada: ");// Escolha uma opção
+opcao = Input.questionInt("");// Leitura da opção do teclado
         
         if(opcao == 9){
             console.log("\nBanco Santos Brasil, o seu banco de confiança!");
@@ -70,30 +71,42 @@ opcao = leia.questionInt();
     switch(opcao){ //Opções do menu
         case 1:
             console.log("\nCriar Conta");
+            console.log("Digite um nome com acento: ");
+            let nome = Input.question("");
+            console.log(nome);
+            keyPress();
             break;
         case 2: 
             console.log("\nListar todas as contas");
+            keyPress();
             break;
         case 3:
             console.log("\nBuscar conta por número");
+            keyPress();
             break;
         case 4:
             console.log("\nAtualizar dados da conta");
+            keyPress();
             break;
         case 5:
             console.log("\nApagar conta");
+            keyPress();
             break;
         case 6:
             console.log("\nSacar");
+            keyPress();
             break;
         case 7:
             console.log("\nDepositar");
+            keyPress();
             break;
         case 8:
             console.log("\nTransferir valor entre contas");
+            keyPress();
             break;
         default:
             console.log("Opção inválida!");
+            keyPress();
             break;
         }
     }
@@ -109,5 +122,8 @@ export function sobre(): void{//Função sobre, apenas mostra os dados da pess
     console.log("https://github.com/Mateus-Santos13");
     console.log("************************************");
 }
-
+function keyPress(): void{
+    console.log("\nPressione ENTER para continuar...");
+    Input.prompt();
+}
 main();
