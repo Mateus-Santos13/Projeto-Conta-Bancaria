@@ -1,10 +1,19 @@
 import leia from "readline-sync";//import readline sync para leitura de dados do teclado
 import { colors } from './src/util/Colors';//importando o arquivo colors.ts
+import { Conta } from "./src/model/conta";
 
 
 export function main(){
 
     let opcao: number;
+
+
+    //instanciar objetos da classe conta
+    //numero da conta, agencia, titularm tipo e saldo;
+    const c1 = new Conta(1, 1234, "Mateus", 1, 100000.00);
+
+    console.log("O titular da conta é: ", c1.titular);
+    console.log("O saldo da conta é: ", c1.saldo);
 
     while(true){
     //Aqui entra os console log do menu com as configurações de cor
