@@ -1,3 +1,5 @@
+import { colors } from '../util/Colors';//importando o arquivo colors.ts
+
 export class Conta{
 
 
@@ -19,7 +21,6 @@ export class Conta{
 	}
 
     //Método get e set de todos os atributos da classe;
-  
 	public get numero(): number {
 		return this._numero;
 	}
@@ -43,7 +44,6 @@ export class Conta{
 	public get saldo(): number {
 		return this._saldo;
 	}
-
 
 	public set numero(value: number) {
 		this._numero = value;
@@ -70,4 +70,62 @@ export class Conta{
 	}
     
     
+
+    //Métodos Auxiliades
+
+    //Método Sacar
+    public sacar(valor: number): boolean{
+       
+        if(valor <=0){
+            console.log(colors.fg.red, "O valor deve ser positivo!", colors.reset);
+            return false;
+        }
+       
+        if(valor > this._saldo){
+        console.log(colors.fg.red, "Saldo insuficiente!", colors.reset);
+        return false;
+       }else{
+           this._saldo -= valor;
+           return true;
+       }
+        
+    }
+
+
+     public depositar(valor: number): void{
+       if(valor > 0){
+            this._saldo += valor;
+        }else{
+            console.log(colors.fg.red, "O valor deve ser positivo!", colors.reset);
+       }
+    }
+
+
+    //Mostrar todos os dados do objetos de uma vez só
+
+    public visualizar(): void{
+
+        let tipo: string;
+
+        switch(this._tipo){
+            case 1:
+                tipo = "Conta Corrente";
+                break;
+            case 2:
+                tipo = "Conta Poupanca";
+                break;
+            default:
+                tipo = "Tipo inválido";
+                break;
+        }
+
+        console.log("\n*********************************");
+        console.log("         Dados da Conta          ");
+        console.log("*********************************");
+        console.log(`Número da conta: ${this._numero}`);
+        console.log(`Agência: ${this._agencia}`);
+        console.log(`Titular: ${this._titular}`);
+        console.log(`Tipo: ${tipo}`);
+        console.log(`Saldo: ${this._saldo.toFixed(2)}`);
+    }
 }
