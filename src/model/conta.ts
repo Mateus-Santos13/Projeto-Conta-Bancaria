@@ -1,6 +1,8 @@
 import { colors } from '../util/Colors';//importando o arquivo colors.ts
 
-export class Conta{
+//Geralmente, a super classe é abstrata, pois ela não pode ser instanciada;
+
+export abstract class Conta{
 
 
     //Atributos da classe;
@@ -73,6 +75,8 @@ export class Conta{
 
     //Métodos Auxiliades
 
+
+    
     //Método Sacar
     public sacar(valor: number): boolean{
        
