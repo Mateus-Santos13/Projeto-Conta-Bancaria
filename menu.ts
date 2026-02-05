@@ -2,6 +2,9 @@ import leia from "readline-sync";//import readline sync para leitura de dados do
 import { colors } from './src/util/Colors';//importando o arquivo colors.ts
 import { Conta } from "./src/model/Conta";
 import { Input } from "./src/model/Input";
+import { ContaCorrente } from "./src/model/ContaCorrente";
+import { ContaPoupanca } from "./src/model/ContaPoupanca";
+
 
 
 export function main(){
@@ -11,23 +14,39 @@ export function main(){
 
     //instanciar objetos da classe conta
     //numero da conta, agencia, titularm tipo e saldo;
-    const c1 = new Conta(1, 1234, "Mateus", 1, 100000.00);
+    //const c1 = new Conta(1, 1234, "Mateus", 1, 100000.00);
 
-    //Testes do Método Sacar
-    console.log("Sacar 100,00: ", c1.sacar(100.00));
-    console.log("Sacar 200000.00: ", c1.sacar(200000.00));
-    console.log("Sacar 0,00: ", c1.sacar(0.00));
+    // //Testes do Método Sacar
+    // console.log("Sacar 100,00: ", c1.sacar(100.00));
+    // console.log("Sacar 200000.00: ", c1.sacar(200000.00));
+    // console.log("Sacar 0,00: ", c1.sacar(0.00));
     
 
-    //Testes do Método Depositar
-    console.log("Depositar -10.00: ");
-    c1.depositar(-10.00);
+    // //Testes do Método Depositar
+    // console.log("Depositar -10.00: ");
+    // c1.depositar(-10.00);
 
-    console.log("Depositar 500.00: ");
-    c1.depositar(500.00);
-    //console.log("O titular da conta é: ", c1.titular);
-    //console.log("O saldo da conta é: ", c1.saldo);
-    c1.visualizar();
+    // console.log("Depositar 500.00: ");
+    // c1.depositar(500.00);
+
+    // c1.visualizar();
+
+    //Testes da classe ContaCorrente
+
+    const cc1 = new ContaCorrente(2, 5678, "Bianca", 1, 200000.00, 2000.00);//Instanciando um objeto da classe ContaCorrente
+
+    //teste do método sacar - Conta corrente;
+    console.log("Sacar 1000,00: ", cc1.sacar(1000.00));
+    console.log("Sacar 200000.00: ", cc1.sacar(200000.00));
+    cc1.depositar(500.00);
+
+    cc1.visualizar();
+
+    //Testes da classe ContaPoupanca
+
+    const cp1 = new ContaPoupanca(3, 9012, "Lúcia", 2, 300000.00, 12);//Instanciando um objeto da classe ContaPoupanca
+    cp1.visualizar();
+
 
     while(true){
     //Aqui entra os console log do menu com as configurações de cor
