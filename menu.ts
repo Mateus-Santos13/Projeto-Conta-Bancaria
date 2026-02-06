@@ -12,9 +12,9 @@ export function main(){
     let opcao: number;
 
 
-    //instanciar objetos da classe conta
-    //numero da conta, agencia, titularm tipo e saldo;
-    //const c1 = new Conta(1, 1234, "Mateus", 1, 100000.00);
+    // instanciar objetos da classe conta
+    // numero da conta, agencia, titular, tipo e saldo;
+    // const c1 = new Conta(1, 1234, "Mateus", 1, 100000.00);
 
     // //Testes do Método Sacar
     // console.log("Sacar 100,00: ", c1.sacar(100.00));

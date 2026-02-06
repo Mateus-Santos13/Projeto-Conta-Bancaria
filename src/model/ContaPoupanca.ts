@@ -26,7 +26,7 @@ export class ContaPoupanca extends Conta{
     public visualizar(): void {//Método visualizar da classe ContaPoupança;
 
         super.visualizar();//Chama o método da classe mae;
-        console.log(`Dia do aniversário: ${this._diaAniversario}`);//Imprime o atributo da classe filha;
+        console.log(`Aniversário da conta: ${this._diaAniversario}`);//Imprime o atributo da classe filha;
     }
 }
 //Agora, fazer o atributo conta poupança. o unico atributo a mais é o atributo aniversário;
