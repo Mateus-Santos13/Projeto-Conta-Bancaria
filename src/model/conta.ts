@@ -130,6 +130,6 @@ export abstract class Conta{
         console.log(`Agência: ${this._agencia}`);
         console.log(`Titular: ${this._titular}`);
         console.log(`Tipo: ${tipo}`);
-        console.log(`Saldo: ${this._saldo.toFixed(2)}`);
+        console.log(`Saldo: R$ ${this._saldo.toFixed(2)}`);
     }
 }

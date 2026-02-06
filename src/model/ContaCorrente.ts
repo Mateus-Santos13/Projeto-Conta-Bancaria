@@ -26,7 +26,7 @@ export class ContaCorrente extends Conta{
     public visualizar(): void {
         
         super.visualizar();//Chama o método da classe mae;
-        console.log(`Limite da conta: ${this._limite.toFixed(2)}`);//Imprime o atributo da classe filha;
+        console.log(`Limite da conta: R$ ${this._limite.toFixed(2)}`);//Imprime o atributo da classe filha;
     }
 
 
