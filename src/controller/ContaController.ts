@@ -1,6 +1,6 @@
 import { ContaRepository } from "../repository/ContaRepository";
 import { colors } from "../util/Colors";
-import { Conta } from "../model/Conta";
+import { Conta } from "../model/conta";
 import { formatarMoeda } from "../util/Currency";
 
 

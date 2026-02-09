@@ -1,5 +1,5 @@
 import { colors } from "../util/Colors";
-import { Conta } from "./Conta";
+import { Conta } from "./conta";
 
 
 export class ContaPoupanca extends Conta{

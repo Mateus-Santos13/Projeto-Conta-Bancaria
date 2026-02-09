@@ -1,4 +1,4 @@
-import { Conta } from "../model/Conta";
+import { Conta } from "../model/conta";
 
 export interface ContaRepository{
 
@@ -10,7 +10,7 @@ export interface ContaRepository{
     deletar(numero: number): void;
     procurarPorTitular(titular: string): void;
 
-    
+
     // Métodos Bancários
     sacar(numero: number, valor: number): void;
     depositar(numero: number, valor: number): void;

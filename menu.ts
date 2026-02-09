@@ -1,6 +1,6 @@
 import leia from "readline-sync";//import readline sync para leitura de dados do teclado
 import { colors } from './src/util/Colors';//importando o arquivo colors.ts
-import { Conta } from "./src/model/Conta";
+import { Conta } from "./src/model/conta";
 import { Input } from "./src/input/Input";
 import { ContaCorrente } from "./src/model/ContaCorrente";
 import { ContaPoupanca } from "./src/model/ContaPoupanca";
